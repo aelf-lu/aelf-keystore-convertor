@@ -3,7 +3,7 @@ using System.CommandLine.Invocation;
 
 namespace AElf.KeyStoreGenerator;
 
-internal abstract class Program
+internal static class Program
 {
     private static async Task<int> Main(string[] args)
     {
