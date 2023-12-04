@@ -1,10 +1,11 @@
+using System.IO;
 using AElf.KeyStore;
 
-namespace AElf.KeyStoreGenerator;
+namespace AElf.KeyStoreConvertor;
 
-public static class KeyStoreGenerator
+public static class KeyStoreConvertor
 {
-    public static void Generate(string privateKey, string keyStorePassword, string keyStorePath)
+    public static void Convert(string privateKey, string keyStorePassword, string keyStorePath)
     {
         AElfKeyStoreService aelfKeyStoreService = new AElfKeyStoreService();
         var json = aelfKeyStoreService.EncryptKeyStoreAsJson(keyStorePassword, privateKey);

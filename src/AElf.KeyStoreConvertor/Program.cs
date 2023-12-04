@@ -1,7 +1,8 @@
 ﻿using System.CommandLine;
 using System.CommandLine.Invocation;
+using System.Threading.Tasks;
 
-namespace AElf.KeyStoreGenerator;
+namespace AElf.KeyStoreConvertor;
 
 internal static class Program
 {
@@ -18,7 +19,7 @@ internal static class Program
         rootCommand.AddArgument(keyStorePassword);
         rootCommand.AddArgument(keyStorePath);
 
-        rootCommand.Handler = CommandHandler.Create<string, string, string>(KeyStoreGenerator.Generate);
+        rootCommand.Handler = CommandHandler.Create<string, string, string>(KeyStoreConvertor.Convert);
 
         return await rootCommand.InvokeAsync(args);
     }
