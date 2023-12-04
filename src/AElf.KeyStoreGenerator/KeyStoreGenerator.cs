@@ -2,7 +2,7 @@ using AElf.KeyStore;
 
 namespace AElf.KeyStoreGenerator;
 
-public class KeyStoreGenerator
+public static class KeyStoreGenerator
 {
     public static void Generate(string privateKey, string keyStorePassword, string keyStorePath)
     {
